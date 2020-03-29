@@ -11,11 +11,13 @@ const GetInput = (props) => {
             setNumber(e.target.value);
             if(e.target.value.length === 0){
                 props.changeNumber(0);
+                return
             }
+            props.changeNumber(parseInt(num));
             return
         }
 
-        if(!isNaN(parseInt(num.charAt(num.length-1)))) {
+        if(String(parseInt(num)).length === num.length) {
             setNumber(num);
             props.changeNumber(parseInt(num));
         }
@@ -53,21 +55,40 @@ const GetInput = (props) => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <input 
+                className = 'input__text'
                 type='text' 
                 name = 'number' 
                 onChange = {setInput}
                 id = 'input'
-                defaultValue = '0' />
-            <button onClick = {clearInput}> Clear Input </button>
-            <br/>
-            <button onClick = {operation} name='add'> + </button>
-            <button onClick = {operation} name='sub'> - </button>
-            <button onClick = {operation} name='mul'> * </button>
-            <button onClick = {operation} name='div'> / </button>
-            <button onClick = {Calculate} name='equal2'> = </button>
-            <button onClick = {Reset}> 0 </button>
+                defaultValue = '0' /><br/>
+            <button 
+                className = 'input__button'
+                onClick = {clearInput}> Clear Input </button><br/>
+            <button 
+                onClick = {operation} 
+                name='add'
+                className = 'button'>+</button>
+            <button 
+                onClick = {operation} 
+                name='sub'
+                className = 'button'>-</button>
+            <button 
+                onClick = {Calculate} 
+                name='equal2'
+                className = 'button'>=</button><br/>
+            <button 
+                onClick = {operation} 
+                name='mul'
+                className = 'button'>*</button>
+            <button 
+                onClick = {operation} 
+                name='div'
+                className = 'button'>/</button>
+            <button 
+                onClick = {Reset}
+                className = 'button'>0</button>
         </div>
     )
 };

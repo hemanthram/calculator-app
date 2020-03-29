@@ -32,24 +32,24 @@ const Calculator = (props) => {
 
     const addition = () => {
         console.log('add');
-        setResult(result + number);
+        setResult((result + number));
     }
 
     const subtraction = () => {
-        setResult(result - number);
+        setResult((result - number));
         console.log('sub');
     }
 
     const multiplication = () => {
         console.log('mul')
         if(start === 1) {setResult(number)}
-        else {setResult(number*result)}
+        else {setResult(parseFloat((number*result).toFixed(3)))}
     }
 
     const division = () => {
         console.log('div')
         if(number === 0) {alert('Division by zero')}
-        else {setResult(result / number);}
+        else {setResult(parseFloat((result / number).toFixed(3)));}
     }
 
     const reset = () => {

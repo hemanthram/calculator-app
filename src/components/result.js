@@ -6,13 +6,15 @@ const Result = (props) => {
         if(i === 'sub') {return '-'};
         if(i === 'mul') {return '*'};
         if(i === 'div') {return '/'};
-        return 'Not selected';
+        return 'Not Selected';
     }
 
     return (
-        <div>
-            <p>Result = {props.result}</p>
-            <p>Operation = {getOperation(props.op)}</p>
+        <div className='container'>
+            <h1 className='result'>Result</h1>
+            <p className='input__text'>{props.result}</p>
+            <p className='operation'>Operation</p>
+            <p className='input__text'>{getOperation(props.op)}</p>
         </div>
     )
 }
