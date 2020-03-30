@@ -6,6 +6,25 @@ const url = 'https://api.randomuser.me/';
 const Part2 = () => {
     const [data, setData] = useState(undefined);
     const [err,setErr] = useState(undefined);
+    const [start,setStart] = useState(true);
+
+    useEffect(() => {
+        fetch(url)
+        .then(results => results.json())
+        .then(dat => {
+            setData(dat.results[0]);
+            console.log(dat.results[0]);
+            setErr(undefined);
+            setStart(false);
+        })
+        .catch((error) => {
+            console.log(error);
+            setErr(error,error.name);
+            alert("Could'nt fetch, Try Again or check your Connection");
+            setStart(false);
+        })
+
+    }, []);
 
     const fetchData = (e) => {
         fetch(url)
@@ -16,6 +35,7 @@ const Part2 = () => {
             setErr(undefined);
             e.target.innerHTML = 'Fetch API';
             e.target.disabled = false;
+            setStart(false);
         })
         .catch((error) => {
             console.log(error);
@@ -34,7 +54,7 @@ const Part2 = () => {
         <div className='container_part2'>
             <div className='header'><div className='container'><h1 className='header__subtitle'> Welcome to new route </h1></div></div>
             <div className='container'><Link className = 'link' to='/'>Click me to go back !!</Link>
-            <button className='fetch' onClick = {fetchData}> Fetch API </button>
+            <button className='fetch' onClick = {fetchData} id = 'fetch' disabled={start}> {start ? 'Loading' : 'Fetch Data'} </button>
             {data && (
             <table><tbody>
                 <tr>
