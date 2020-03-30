@@ -1,12 +1,48 @@
 .button {
-    background: $bag1;
-    color: $bag2;
+    $eq : rgb(255, 187, 40);
+    background: $eq;
+    color: white;
     text-align: center;
-    display: inline-block;
-    font-size: $xls;
+    font-size: $xls+3rem;
     width: 25%;
     border: none;
     width : 10rem;
-    padding: 1.5rem 0;
-    margin: 1rem;
+    padding: 0.4rem 0;
+    margin: 0.2rem;
+    border: none;
+    font-family: $font;
+    border-radius: 30px;
+    font-weight: bolder;
+    border-bottom: 5px solid darken($color: $eq, $amount: 12);
+}
+$gap : 1rem;
+.equal2 {
+    margin-left: $gap;
+    $eq : rgb(13, 218, 105);
+    background: $eq;
+    border-bottom: 5px solid darken($color: $eq, $amount: 12);
+}
+
+.reset {
+    margin-left: $gap;
+    $eq : rgb(22, 144, 243);
+    background: $eq;
+    border-bottom: 5px solid darken($color: $eq, $amount: 12);
+}
+
+.fetch {
+    background: $bag1;
+    color: $bag2;
+    text-align: center;
+    font-size: 2.8rem;
+    width: 20rem;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    font-family: $font;
+    border: none;
+    border-bottom: 5px solid darken($color: $bag1, $amount: 10);
+}
+
+.fetch:disabled {
+    opacity: 0.5;
 }

@@ -60,10 +60,10 @@ const Calculator = (props) => {
     }
 
     return (
-        <div>
+        <div className = 'container_main'>
             <Header 
-                title='Calculator' 
-                subtitle='- By Hemanth' />
+                title='<Calculator/>' 
+                subtitle='created_by_hemanth' />
             <Result 
                 result = {result}
                 op = {op} />
@@ -72,7 +72,7 @@ const Calculator = (props) => {
                 setOperation = {setOperation}
                 calculate = {calculate} 
                 reset = {reset} />
-            <Link to='/new_route'> Part 2 </Link>
+            <div className='container'><Link className='link' to='/new_route'> Click here to go to the other Route !! </Link></div>
         </div>
     )
 }

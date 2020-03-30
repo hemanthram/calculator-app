@@ -1,8 +1,12 @@
+$font : Courier, monospace;
+$link : 'https://wallpaperaccess.com/full/1295383.jpg';
 html {
     font-size: 62.5%;
+    background: rgb(252, 123, 91);
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font;
     font-size: 1.6rem;
 }
+

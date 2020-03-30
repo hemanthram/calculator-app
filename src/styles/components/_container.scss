@@ -1,5 +1,47 @@
+.container1 {
+    max-width: 50rem;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
 .container {
     max-width: 50rem;
     margin: 0 auto;
-    padding: 0 $ms;
+    padding: 0 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link {
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(110, 13, 0);
+}
+
+.container_main {
+    border-top: 10px solid darken($color:$bag1, $amount: 10);
+    box-shadow: 10px 10px rgba(44, 0, 0, 0.274);
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0;
+    background: rgb(231, 230, 222);
+    padding-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.container_part2 {
+    border-top: 10px solid darken($color:$bag1, $amount: 10);
+    box-shadow: 10px 10px rgba(44, 0, 0, 0.274);
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    padding-bottom: 3rem;
+    border-radius: 10px;
+    align-items: center;
 }

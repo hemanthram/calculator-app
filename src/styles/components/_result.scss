@@ -1,19 +1,60 @@
+.res {
+    display: flex;
+    flex-direction: column;
+}
+$len : 30rem;
+$eq :  rgb(240, 180, 156);
 .result {
-    color:$bag1;
-    font-size: $ls;
-    border: none;
-    margin: 1rem;
-    padding: 1rem 1rem;
+    background: $bag1;
+    color:$eq;
+    font-size: $ms;
     text-align: right;
-    width: 34rem;
+    width: $len;
+    margin:0;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid darken($color: $bag1, $amount: 10);
+    font-weight: bolder;
 }
 
+.answer {
+    background: $bag1;
+    color:$bag2;
+    font-size: $ls;
+    border: none;
+    text-align: right;
+    width: $len;
+    margin:0;
+    padding: 1rem 2rem;
+    border-bottom: 5px solid darken($color: $bag1, $amount: 10);
+    font-weight: bolder;
+}
+
+.op {   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $eq;
+    border-bottom: 5px solid darken($color: $eq, $amount: 10);
+}
 .operation {
+    width:10rem;   
     color:$bag1;
     font-size: $ms;
     border: none;
-    margin: 1rem;
+    margin: 0;
+    padding: 1rem 1rem;
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.sym {
+    width: 20rem;
+    color: $bag1;
+    font-size: $ls;
+    border: none;
+    margin: 0;
     padding: 1rem 1rem;
     text-align: right;
-    width: 34rem;
+    font-weight: bolder;
 }

@@ -4,17 +4,17 @@ const Result = (props) => {
     const getOperation = (i) => {
         if(i === 'add') {return '+'};
         if(i === 'sub') {return '-'};
-        if(i === 'mul') {return '*'};
+        if(i === 'mul') {return 'x'};
         if(i === 'div') {return '/'};
-        return 'Not Selected';
+        return '-__-';
     }
 
     return (
         <div className='container'>
-            <h1 className='result'>Result</h1>
-            <p className='input__text'>{props.result}</p>
-            <p className='operation'>Operation</p>
-            <p className='input__text'>{getOperation(props.op)}</p>
+            <div className='res'><p className='result'>Your Answer</p>
+            <p className='answer'>{props.result}</p></div>
+            <div className='op'><p className='operation'>Operation</p>
+            <p className='sym'>{getOperation(props.op)}</p></div>
         </div>
     )
 }

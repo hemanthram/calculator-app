@@ -31,10 +31,10 @@ const Part2 = () => {
     }
 
     return (
-        <div>
-            <p> Welcome to new route </p>
-            <Link to='/'>Go back</Link><br/>
-            <button onClick = {fetchData}> Fetch API </button>
+        <div className='container_part2'>
+            <div className='header'><div className='container'><h1 className='header__subtitle'> Welcome to new route </h1></div></div>
+            <div className='container'><Link className = 'link' to='/'>Click me to go back !!</Link>
+            <button className='fetch' onClick = {fetchData}> Fetch API </button>
             {data && (
             <table><tbody>
                 <tr>
@@ -79,7 +79,7 @@ const Part2 = () => {
                 </tr>
             </tbody></table> 
             )}
-            {err && <p>Failed to Fetch</p>}
+            {err && <p>Failed to Fetch</p>}</div>
         </div>
     )
 }

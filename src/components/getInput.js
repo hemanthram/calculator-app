@@ -22,7 +22,7 @@ const GetInput = (props) => {
             props.changeNumber(parseInt(num));
         }
         else {  
-            alert('Only integer input')
+            alert('No alphanumeric or leading zeros allowed')
             e.target.value = number;
         }
     } 
@@ -55,21 +55,21 @@ const GetInput = (props) => {
     }
 
     return (
-        <div className='container'>
-            <input 
+        <div>
+            <div className='container'><input 
                 className = 'input__text'
                 type='text' 
                 name = 'number' 
                 onChange = {setInput}
                 id = 'input'
-                defaultValue = '0' /><br/>
-            <button 
+                placeholder='input please !' /></div>
+            <div className ='container1'><button 
                 className = 'input__button'
-                onClick = {clearInput}> Clear Input </button><br/>
-            <button 
+                onClick = {clearInput}> Clear Input </button></div>
+            <div className='container1'><button 
                 onClick = {operation} 
                 name='add'
-                className = 'button'>+</button>
+                className = 'button add'>+</button>
             <button 
                 onClick = {operation} 
                 name='sub'
@@ -77,8 +77,8 @@ const GetInput = (props) => {
             <button 
                 onClick = {Calculate} 
                 name='equal2'
-                className = 'button'>=</button><br/>
-            <button 
+                className = 'button equal2'>=</button></div>
+            <div className='container1'><button 
                 onClick = {operation} 
                 name='mul'
                 className = 'button'>*</button>
@@ -88,7 +88,7 @@ const GetInput = (props) => {
                 className = 'button'>/</button>
             <button 
                 onClick = {Reset}
-                className = 'button'>0</button>
+                className = 'button reset'>0</button></div>
         </div>
     )
 };

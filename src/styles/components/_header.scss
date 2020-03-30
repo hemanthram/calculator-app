@@ -1,5 +1,5 @@
 .header {
-    background: $bag1;
+    background: black;
     color: white;
     margin-bottom: 2rem;
     padding: 1.6rem 0;
@@ -12,8 +12,9 @@
 }
 
 .header__subtitle {
+    text-align: center;
     color: $bag2;
     margin: 0;
     padding: 0;
-    font-size: 2.8rem;
+    font-size: 1.6rem;
 }
